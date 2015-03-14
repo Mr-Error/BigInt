@@ -172,7 +172,7 @@ void MainWindow::on_Continue_clicked()
 // Help
 void MainWindow::on_pushButton_clicked()
 {
-    QFile inputFile("Help.txt");
+    QFile inputFile("Help.txt");  // "Help" without ".txt" int Linux version
     inputFile.open(QIODevice::ReadOnly);
 
     QTextStream in(&inputFile);
