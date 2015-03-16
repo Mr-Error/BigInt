@@ -172,7 +172,7 @@ void MainWindow::on_Continue_clicked()
 // Help
 void MainWindow::on_pushButton_clicked()
 {
-    QFile inputFile("Help.txt");  // "Help" without ".txt" int Linux version
+    QFile inputFile("Help.txt");
     inputFile.open(QIODevice::ReadOnly);
 
     QTextStream in(&inputFile);
@@ -186,7 +186,16 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_actionAbout_triggered()
 {
-    ui->Num1->setText("Copyright 2015 Error\nSee COPYING for more details.");
+    QFile inputFile("About.txt");
+    inputFile.open(QIODevice::ReadOnly);
+
+    QTextStream in(&inputFile);
+    QString line = in.readAll();
+    inputFile.close();
+
+    ui->Result->setPlainText(line);
+    QTextCursor cursor = ui->Result->textCursor();
+    cursor.movePosition(QTextCursor::Start, QTextCursor::MoveAnchor, 1);
 }
 
 void MainWindow::on_Qiut_triggered()

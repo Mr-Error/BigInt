@@ -8,11 +8,11 @@
 	Continue	将结果框中的数据复制到第一个框内，以便继续运算
 	Help		打开此帮助
 
-Windows版本使用：
+Windows版本开发平台：
 	Qt Creator 3.3.0 (opensource)
 基于：
-	Based on Qt 5.4.0 (MSVC 2010, 32 bit)
+	Qt 5.4.0 (MSVC 2010, 32 bit)
 编译平台：
 	Microsoft Windows XP Professional SP3
 
-本程序以GPLv3发布
+本程序以GPLv3发布,详见COPYING.txt (UTF-8),或 http://www.gnu.org/licenses/gpl.html
